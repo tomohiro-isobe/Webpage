@@ -1,0 +1,85 @@
+body {
+  background-color: #615a55;
+}
+.table tr {
+  border-bottom: solid 1px #ddd;
+}
+.table tbody th {
+  font-weight: normal;
+}
+.table th,
+.table td {
+  border-top-width: 0px !important;
+}
+
+#news {
+  background-color: white;
+  padding-top: 50px;
+}
+
+#concept {
+  background-color: white;
+  padding-bottom: 50px;
+}
+
+#menu {
+  background-color: #c3b6ad;
+  padding-bottom: 50px;
+}
+#access {
+  background-color: white;
+  padding-bottom: 50px;
+}
+#access h3 {
+  margin-bottom: 30px;
+}
+#access .table th {
+  width: 90px;
+}
+#access .google-map iframe {
+  width: 100%;
+  height: 400px;
+  /* スクロール時に GoogleMap にフォーカスしで邪魔されないように */
+  pointer-events: none;
+}
+#contact ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+#footer {
+  color: white;
+}
+#footer a {
+  color: white;
+}
+#footer input,
+#footer textarea {
+  border-color: #c3b6ad;
+  background-color: #c3b6ad;
+}
+#footer #rights {
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.table {
+    margin-top: 3%;
+}
+
+.icon {
+    float: right;
+    background-color: #808080;
+    color: white;
+    font-size: 11px;
+    text-align: center;
+    width: 30px;
+    border-radius: 2px;
+    margin-top: 3px;
+}
+
+img {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
