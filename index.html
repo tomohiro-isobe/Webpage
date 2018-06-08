@@ -16,34 +16,79 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <!-- [endif] -->
   </head>
-  <body>
+  <!--スクロールスパイ-->
+  <body role="document" data-spy="scroll" data-target="#scrollspy" data-offset="72" id="t_top">
   
-    <section id="concept">
-      
-      <nav class="navbar navbar-default">
-      	<div class="container-fluid">
-      		<div class="navbar-header">
-      			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#cafenavbar">
-      				<span class="sr-only">Toggle navigation</span>
-      				<span class="icon-bar"></span>
-      				<span class="icon-bar"></span>
-      				<span class="icon-bar"></span>
-      			</button>
-      			<a class="navbar-brand" href="#"><img src="images/logo.png" style="margin-left: 25px;"></a>
+    <section id="top">
+      <div id="scrollspy">
+        <nav class="navbar navbar-default navbar-fixed-top">
+        	<div class="container-fluid">
+        		<div class="navbar-header">
+        			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#cafenavbar">
+        				<span class="sr-only">Toggle navigation</span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        			</button>
+        			<a class="navbar-brand" href="#"><img src="images/logo.png"></a>
+        		</div>
+        		
+        		<div class="collapse navbar-collapse" id="cafenavbar">
+        			<ul class="nav navbar-nav navbar-right">
+        				<li><a class="Linkpage" href="#t_top">Top</a></li>
+        				<li><a class="Linkpage" href="#concept">Concept</a></li>
+        				<li><a class="Linkpage" href="#menu">Menu</a></li>
+        				<li><a class="Linkpage" href="#access">Access</a></li>
+        				<li><a class="Linkpage" href="#contact">Contact</a></li>
+        			</ul>
+        		</div>
+        	</div>
+        </nav>
+      </div>
+      <!--カルーセル-->
+      <div id="TopCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+      	<ol class="carousel-indicators">
+      		<li class="active" data-target="#TopCarousel" data-slide-to="0"></li>
+      		<li data-target="#TopCarousel" data-slide-to="1"></li>
+      		<li data-target="#TopCarousel" data-slide-to="2"></li>
+      	</ol>
+      	<div class="carousel-inner" role="listbox">
+      		<div class="item active">
+      			<img src="images/kv_01.jpg" alt="First slide" class="img-responsive">
+      			<div class="carousel-caption">
+      			  <h3>和牛100%のハンバーガー</h3>
+      			  <p>当店イチオシ！和牛100%のパテはジューシーでとっても肉厚！お肉の美味しさを際立てるタルタルソースと黒胡椒を効かせた一品</p>
+      			</div>
       		</div>
       		
-      		<div class="collapse navbar-collapse" id="cafenavbar">
-      			<ul class="nav navbar-nav navbar-right">
-      				<li><a href="#">Top</a></li>
-      				<li><a href="#">Concept</a></li>
-      				<li><a href="#">Menu</a></li>
-      				<li><a href="#">Access</a></li>
-      				<li><a href="#">Contact</a></li>
-      			</ul>
+      		<div class="item">
+      			<img src="images/kv_02.jpg" alt="Second slide" class="img-responsive">
+      			<div class="carousel-caption">
+      			  <h3>生ハムとセサミのピッツァ</h3>
+      			  <p>店内にあるピザ釜で焼いた本格的なピザ。上質の小麦を使った生地にイタリア産の生ハムとセサミをのせました</p>
+      			</div>
       		</div>
+      		
+      		<div class="item">
+      			<img src="images/kv_03.jpg" alt="Third slide" class="img-responsive">
+      			<div class="carousel-caption">
+      			  <h3>サーモンとクリームチーズのハンバーガー</h3>
+      			  <p>スモークサーモンと相性の良い濃厚なクリームチーズを玄米入りのバンズでサンドした身体に優しい一品</p>
+      			</div>
+      		</div>
+      		
       	</div>
-      </nav>
-
+      	
+      	<a class="left carousel-control" href="#TopCarousel" role="button" data-slide="prev">
+      		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      		<span class="sr-only">Prev</span>
+      	</a>
+      	<a class="right carousel-control" href="#TopCarousel" role="button" data-slide="next">
+      		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      		<span class="sr-only">Next</span>
+      	</a>
+      </div>
+      
       <div class="container">
         <div class="row">
           <div class="col-sm-offset-2 col-sm-8">
@@ -66,7 +111,7 @@
           </div>
         </div>
               
-        <h2 class="text-center">Concept</h2>
+        <h2 class="text-center" id="concept">Concept</h2>
         <p class="text-center">
         Cafe KiRAMEKIは、70〜80年代のカリフォルニアと店主オリジナルのエッセンスを加えた懐かしさと新しさを感じる店内。<br>
         一押しメニューは和牛100%のパテで作っているハンバーガー！<br>
@@ -81,43 +126,156 @@
         <h3 class="text-center">foods</h3>
         <div class="row">
             <div class="col-sm-4 col-md-4 col-lg-4">
-              <a href="#" class="thumbnail">
+              <a href="#" data-toggle="modal" data-target="#Modal_01" class="thumbnail">
                 <img src="images/food_img01.jpg" class="img-responsive">
               </a>
+              
+              <!--モーダル表示 画像1-->
+              <div class="modal fade" id="Modal_01" tabindex="-1">
+              	<div class="modal-dialog">
+              		<div class="modal-content">
+              			<div class="modal-header">
+              				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+              				<h4 class="modal-title text-center">サーモンとクリームチーズのハンバーガー</h4>
+              			</div>
+              			<div class="modal-body">
+              				<img src="images/food_img01.jpg" class="img-responsive">
+              			</div>
+              			<div class="modal-footer">
+              				<h5 class="text-center">スモークサーモンと相性の良い濃厚なクリームチーズを玄米入りのバンズでサンドした身体に優しい一品</h5>
+              			</div>
+              		</div>
+              	</div>
+              </div>
+              
             </div>
             
+            <!--画像2-->
             <div class="col-sm-4 col-md-4 col-lg-4">
-              <a href="#" class="thumbnail">
+              <a href="#" data-toggle="modal" data-target="#Modal_02" class="thumbnail">
                 <img src="images/food_img02.jpg" class="img-responsive">
               </a>
+              
+              <div class="modal fade" id="Modal_02" tabindex="-1">
+              	<div class="modal-dialog">
+              		<div class="modal-content">
+              			<div class="modal-header">
+              				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+              				<h4 class="modal-title text-center">和牛100%のハンバーガー</h4>
+              			</div>
+              			<div class="modal-body">
+              				<img src="images/food_img02.jpg" class="img-responsive">
+              			</div>
+              			<div class="modal-footer">
+              				<h5 class="text-center">当店イチオシ！和牛100%のパテはジューシーでとっても肉厚！お肉の美味しさを際立てるタルタルソースと黒胡椒を効かせた一品</h5>
+              			</div>
+              		</div>
+              	</div>
+              </div>
+              
             </div>
             
+            <!--画像3-->
             <div class="col-sm-4 col-md-4 col-lg-4">
-              <a href="#" class="thumbnail">
+              <a href="#" data-toggle="modal" data-target="#Modal_03" class="thumbnail">
                 <img src="images/food_img03.jpg" class="img-responsive">
               </a>
+              
+              <div class="modal fade" id="Modal_03" tabindex="-1">
+              	<div class="modal-dialog">
+              		<div class="modal-content">
+              			<div class="modal-header">
+              				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+              				<h4 class="modal-title text-center">生ハムとセサミのピッツァ</h4>
+              			</div>
+              			<div class="modal-body">
+              				<img src="images/food_img03.jpg" class="img-responsive">
+              			</div>
+              			<div class="modal-footer">
+              				<h5 class="text-center">店内にあるピザ釜で焼いた本格的なピザ。上質の小麦を使った生地にイタリア産の生ハムとセサミをのせました</h5>
+              			</div>
+              		</div>
+              	</div>
+              </div>
+              
             </div>
         </div>
         
+        <!--画像4-->
         <h3 class="text-center">drinks</h3>
         <div class="row">
             <div class="col-sm-4 col-md-4 col-lg-4">
-              <a href="#" class="thumbnail">
+              <a href="#" data-toggle="modal" data-target="#Modal_04" class="thumbnail">
                 <img src="images/drink_img01.jpg" class="img-responsive">
               </a>
+              
+              <div class="modal fade" id="Modal_04" tabindex="-1">
+              	<div class="modal-dialog">
+              		<div class="modal-content">
+              			<div class="modal-header">
+              				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+              				<h4 class="modal-title text-center">アセロラとカシスのジュース</h4>
+              			</div>
+              			<div class="modal-body">
+              				<img src="images/drink_img01.jpg" class="img-responsive">
+              			</div>
+              			<div class="modal-footer">
+              				<h5 class="text-center">アセロラの酸味とカシスの甘みが調和されていてさっぱりと飲める可愛らしいジュース</h5>
+              			</div>
+              		</div>
+              	</div>
+              </div>
+              
             </div>
             
+            <!--画像5-->
             <div class="col-sm-4 col-md-4 col-lg-4">
-              <a href="#" class="thumbnail">
+              <a href="#" data-toggle="modal" data-target="#Modal_05" class="thumbnail">
                 <img src="images/drink_img02.jpg" class="img-responsive">
               </a>
+              
+              <div class="modal fade" id="Modal_05" tabindex="-1">
+              	<div class="modal-dialog">
+              		<div class="modal-content">
+              			<div class="modal-header">
+              				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+              				<h4 class="modal-title text-center">カフェラテ</h4>
+              			</div>
+              			<div class="modal-body">
+              				<img src="images/drink_img02.jpg" class="img-responsive">
+              			</div>
+              			<div class="modal-footer">
+              				<h5 class="text-center">ほっと一息つきたい時にまろやかなミルクと濃厚なエスプレッソが絶妙なカフェラテ</h5>
+              			</div>
+              		</div>
+              	</div>
+              </div>
+              
             </div>
             
+            <!--画像6-->
             <div class="col-sm-4 col-md-4 col-lg-4">
-              <a href="#" class="thumbnail">
+              <a href="#" data-toggle="modal" data-target="#Modal_06" class="thumbnail">
                 <img src="images/drink_img03.jpg" class="img-responsive">
               </a>
-                
+              
+              <div class="modal fade" id="Modal_06" tabindex="-1">
+              	<div class="modal-dialog">
+              		<div class="modal-content">
+              			<div class="modal-header">
+              				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+              				<h4 class="modal-title text-center">ブラッドオレンジのフレッシュジュース</h4>
+              			</div>
+              			<div class="modal-body">
+              				<img src="images/drink_img03.jpg" class="img-responsive">
+              			</div>
+              			<div class="modal-footer">
+              				<h5 class="text-center">シチリアから直送されるブラッドオレンジを絞ったフレッシュジュース</h5>
+              			</div>
+              		</div>
+              	</div>
+              </div>
+              
             </div>
         </div>
       </div>
@@ -216,5 +374,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://foo.tld/jquery/animatescroll.js-master/animatescroll.noeasing.js"></script>
+    <script>
+      $(function() {
+        $(".Linkpage").click(function() {
+          var gethref = $(this).attr("href");
+          $(gethref).animatescroll({
+            padding: 70
+          });
+        });
+      });
+    </script>
   </body>
 </html>

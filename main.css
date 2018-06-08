@@ -1,5 +1,6 @@
 body {
   background-color: #615a55;
+  padding-top: 100px;
 }
 .table tr {
   border-bottom: solid 1px #ddd;
@@ -17,7 +18,7 @@ body {
   padding-top: 50px;
 }
 
-#concept {
+#top{
   background-color: white;
   padding-bottom: 50px;
 }
@@ -63,8 +64,8 @@ body {
   margin-bottom: 25px;
 }
 
-#concept .table {
-    margin-top: -20px;
+#top .table {
+    margin-top: 10%;
 }
 
 
@@ -91,5 +92,9 @@ section .container span.glyphicon {
 footer section .container span.glyphicon {
   font-size: 20px;
   margin-right: 10px;
+}
+
+#TopCarousel {
+  margin-top: -50px;
 }
 
